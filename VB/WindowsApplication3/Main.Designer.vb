@@ -29,7 +29,7 @@ Namespace DXSample
 			Me.defaultLookAndFeel1 = New DevExpress.LookAndFeel.DefaultLookAndFeel(Me.components)
 			Me.myGridControl1 = New DXSample.MyGridControl()
 			Me.customersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-			Me.nwindDataSet = New DXSample.nwindDataSet()
+
 			Me.myGridView1 = New DXSample.MyGridView()
 			Me.colCustomerID = New DevExpress.XtraGrid.Columns.GridColumn()
 			Me.colCompanyName = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -37,10 +37,9 @@ Namespace DXSample
 			Me.colContactTitle = New DevExpress.XtraGrid.Columns.GridColumn()
 			Me.colAddress = New DevExpress.XtraGrid.Columns.GridColumn()
 			Me.colCity = New DevExpress.XtraGrid.Columns.GridColumn()
-			Me.customersTableAdapter = New DXSample.nwindDataSetTableAdapters.CustomersTableAdapter()
+
 			CType(Me.myGridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
 			CType(Me.customersBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-			CType(Me.nwindDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
 			CType(Me.myGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
 			Me.SuspendLayout()
 			' 
@@ -58,16 +57,8 @@ Namespace DXSample
 			Me.myGridControl1.Size = New System.Drawing.Size(478, 439)
 			Me.myGridControl1.TabIndex = 0
 			Me.myGridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() { Me.myGridView1})
-			' 
-			' customersBindingSource
-			' 
-			Me.customersBindingSource.DataMember = "Customers"
-			Me.customersBindingSource.DataSource = Me.nwindDataSet
-			' 
-			' nwindDataSet
-			' 
-			Me.nwindDataSet.DataSetName = "nwindDataSet"
-			Me.nwindDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+
+
 			' 
 			' myGridView1
 			' 
@@ -118,10 +109,7 @@ Namespace DXSample
 			Me.colCity.Name = "colCity"
 			Me.colCity.Visible = True
 			Me.colCity.VisibleIndex = 5
-			' 
-			' customersTableAdapter
-			' 
-			Me.customersTableAdapter.ClearBeforeFill = True
+
 			' 
 			' Main
 			' 
@@ -134,7 +122,7 @@ Namespace DXSample
 '			Me.Load += New System.EventHandler(Me.Main_Load);
 			CType(Me.myGridControl1, System.ComponentModel.ISupportInitialize).EndInit()
 			CType(Me.customersBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-			CType(Me.nwindDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+
 			CType(Me.myGridView1, System.ComponentModel.ISupportInitialize).EndInit()
 			Me.ResumeLayout(False)
 
@@ -145,9 +133,9 @@ Namespace DXSample
 		Private defaultLookAndFeel1 As DevExpress.LookAndFeel.DefaultLookAndFeel
 		Private myGridControl1 As MyGridControl
 		Private WithEvents myGridView1 As MyGridView
-		Private nwindDataSet As nwindDataSet
+
 		Private customersBindingSource As System.Windows.Forms.BindingSource
-		Private customersTableAdapter As DXSample.nwindDataSetTableAdapters.CustomersTableAdapter
+
 		Private colCustomerID As DevExpress.XtraGrid.Columns.GridColumn
 		Private colCompanyName As DevExpress.XtraGrid.Columns.GridColumn
 		Private colContactName As DevExpress.XtraGrid.Columns.GridColumn
